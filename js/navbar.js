@@ -34,3 +34,28 @@ export function initNavbar() {
     }
 }
 
+/**
+ * Smooth scroll for anchor links
+ * Использует обход offsetParent для вычисления абсолютной позиции,
+ * игнорируя sticky-сдвиг. Это решает проблему прокрутки к секциям,
+ * которые перекрыты другими sticky-секциями с большим z-index.
+ */
+export function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                // Абсолютная позиция через обход offsetParent (игнорирует sticky)
+                let top = 0;
+                let el = target;
+                while (el) {
+                    top += el.offsetTop;
+                    el = el.offsetParent;
+                }
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+        });
+    });
+}
+
