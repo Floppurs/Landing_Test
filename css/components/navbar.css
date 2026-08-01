@@ -46,25 +46,6 @@
     -webkit-backdrop-filter: blur(24px);
     height: 60px;
     box-shadow: 0 4px 30px rgba(0, 255, 65, 0.1), 0 0 60px rgba(0, 255, 65, 0.04);
-    border-bottom: 1px solid rgba(0, 255, 65, 0.12);
-}
-
-.navbar.scrolled::before {
-    background: linear-gradient(180deg,
-            rgba(0, 255, 65, 0.10) 0%,
-            rgba(0, 255, 65, 0.03) 60%,
-            transparent 100%);
-    border-bottom: 1px solid rgba(0, 255, 65, 0.15);
-    box-shadow: 0 8px 60px rgba(0, 255, 65, 0.08);
-}
-
-.navbar.scrolled::after {
-    opacity: 1;
-    width: 800px;
-    height: 100px;
-    background: radial-gradient(ellipse at center,
-            rgba(0, 255, 65, 0.12) 0%,
-            transparent 70%);
 }
 
 .nav-logo {

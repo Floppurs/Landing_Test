@@ -7,6 +7,7 @@ import { initNavbar, initSmoothScroll } from './navbar.js';
 import { initScrollAnimations, initHeroParallax } from './animations.js';
 import { initPlanet } from './planet.js';
 import { initTextScramble } from './text-shuffle.js';
+import { initTvOnEffect } from './tv-on-effect.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initCursorGlow();
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroParallax();
     initPlanet();
     initTextScramble();
+    initTvOnEffect();
 
     console.log('🚀 Портфолио загружено!');
 });
