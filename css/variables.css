@@ -1,0 +1,48 @@
+:root {
+    /* Colors — Toxic Green Theme */
+    --color-bg: #0a0e0a;
+    --color-bg-card: #0d140d;
+    --color-bg-overlay: rgba(5, 12, 5, 0.88);
+    --color-text-primary: #e0ffe0;
+    --color-text-secondary: #80b380;
+    --color-text-muted: #3a553a;
+    --color-accent: #00ff41;
+    --color-accent-hover: #00cc33;
+    --color-pink: #00ff41;
+    --color-pink-hover: #00cc33;
+    --color-green: #39ff14;
+    --color-green-hover: #00cc00;
+    --color-purple: #00ff41;
+    --color-purple-hover: #00dd33;
+
+    /* Gradients */
+    --gradient-logo: linear-gradient(135deg, #00ff41, #39ff14);
+    --gradient-hero: linear-gradient(135deg, #00ff41, #39ff14, #0aff0a);
+    --gradient-cta: linear-gradient(135deg, #00ff41, #00cc33);
+    --gradient-cta-hover: linear-gradient(135deg, #39ff14, #00ff41);
+    --gradient-neon-glow: linear-gradient(135deg, rgba(0, 255, 65, 0.2), rgba(57, 255, 20, 0.05));
+
+    /* Typography */
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-medium: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    /* Glow */
+    --glow-cursor: 400px;
+    --glow-opacity: 0.12;
+
+    /* Shadows */
+    --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --shadow-card-hover: 0 30px 80px rgba(0, 255, 65, 0.2);
+    --shadow-btn: 0 12px 40px rgba(0, 255, 65, 0.35);
+    --shadow-nav: 0 4px 30px rgba(0, 0, 0, 0.4);
+
+    /* Navbar */
+    --nav-glow-color: rgba(0, 255, 65, 0.08);
+}
+
+/* Убираем старые неиспользуемые классы */

@@ -1,0 +1,218 @@
+/* ===== NAVBAR ===== */
+
+.navbar {
+    padding-top: 3%;
+    font-size: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all var(--transition-medium);
+    overflow: visible;
+}
+
+/* Центрируем навигационные ссылки */
+.nav-links {
+    flex-shrink: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    gap: 5vw;
+    pointer-events: none;
+}
+
+.nav-links * {
+    pointer-events: auto;
+}
+
+/* Контейнер для кнопки "Контакты" — справа */
+.nav-right {
+    display: flex;
+    margin-left: 3vw;
+    margin-right: 5vw;
+}
+
+.navbar.scrolled {
+    padding-top: 0;
+    font-size: 20px;
+    background: var(--color-bg-overlay);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    height: 60px;
+    box-shadow: 0 4px 30px rgba(0, 255, 65, 0.1), 0 0 60px rgba(0, 255, 65, 0.04);
+    border-bottom: 1px solid rgba(0, 255, 65, 0.12);
+}
+
+.navbar.scrolled::before {
+    background: linear-gradient(180deg,
+            rgba(0, 255, 65, 0.10) 0%,
+            rgba(0, 255, 65, 0.03) 60%,
+            transparent 100%);
+    border-bottom: 1px solid rgba(0, 255, 65, 0.15);
+    box-shadow: 0 8px 60px rgba(0, 255, 65, 0.08);
+}
+
+.navbar.scrolled::after {
+    opacity: 1;
+    width: 800px;
+    height: 100px;
+    background: radial-gradient(ellipse at center,
+            rgba(0, 255, 65, 0.12) 0%,
+            transparent 70%);
+}
+
+.nav-logo {
+    margin-left: 3%;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+#planetCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast), text-shadow var(--transition-fast);
+    letter-spacing: 0.5px;
+    /* text-transform: uppercase; */
+    position: relative;
+    /* font-size: clamp(22px, 1.2vw, 30px); */
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+    text-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-logo);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
+    transition: width var(--transition-fast);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-contact-btn {
+    padding: 8px 24px;
+    border: 2px solid var(--color-accent);
+    border-radius: 50px;
+    color: var(--color-accent) !important;
+    font-weight: 600 !important;
+    transition: all var(--transition-fast) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+}
+
+.nav-contact-btn:hover {
+    background: var(--color-accent);
+    color: #0a0e0a !important;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.4);
+    text-shadow: none !important;
+}
+
+.nav-contact-btn::after {
+    display: none !important;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    margin-left: auto;
+    margin-right: 5%;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 56px;
+    height: 4px;
+    background: var(--color-text-primary);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+    box-shadow: 0 0 12px rgba(0, 255, 65, 0.2);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(14px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-14px) rotate(-45deg);
+}
+
+/* Показываем кнопку "Контакты" в меню только на мобилках */
+.nav-mobile-only {
+    display: none;
+}
+
+/* === Responsive Navbar === */
+
+/* Плавное сжатие навигационных ссылок при сужении экрана */
+
+@media (max-width: 1350px) {
+
+    .nav-links {
+        
+        position: fixed !important;
+        left: auto !important;
+        transform: none !important;
+        top: 0;
+        right: -100%;
+        width: 320px;
+        height: 100vh;
+        background: rgba(5, 12, 5, 0.97);
+        backdrop-filter: blur(24px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: right var(--transition-medium);
+        border-left: 2px solid rgba(0, 255, 65, 0.15);
+        box-shadow: -10px 0 60px rgba(0, 255, 65, 0.06);
+        z-index: 999;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        position: relative;
+        z-index: 1005;
+    }
+
+    /* Показываем кнопку в мобильном меню */
+    .nav-mobile-only {
+        display: block;
+    }
+
+    /* Прячем отдельную кнопку справа на мобилках */
+    .nav-right {
+        display: none;
+    }
+}
