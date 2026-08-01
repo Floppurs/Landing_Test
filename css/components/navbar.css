@@ -125,7 +125,7 @@
 .nav-contact-btn:hover {
     background: var(--color-accent);
     color: #0a0e0a !important;
-    box-shadow: 0 0 30px rgba(0, 255, 65, 0.4);
+    box-shadow: 0 0 0 10px, 0 0 30px rgba(0, 255, 65, 0.4);
     text-shadow: none !important;
 }
 

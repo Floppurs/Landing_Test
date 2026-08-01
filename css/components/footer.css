@@ -97,7 +97,7 @@
     border-color: var(--color-accent);
     color: #0a0e0a;
     transform: translateY(-2px);
-    box-shadow: 0 0 24px rgba(0, 255, 65, 0.3);
+    box-shadow: 0 0 0 10px, 0 0 24px rgba(0, 255, 65, 0.3);
 }
 
 .footer-contact-item {
