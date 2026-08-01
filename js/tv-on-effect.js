@@ -17,7 +17,7 @@ export function initTvOnEffect() {
         { width: '100%', height: '100%', filter: 'brightness(1) invert(0)' }
     ];
 
-    const options = { duration: 1200, easing: 'ease-in-out', fill: 'both' };
+    const options = { duration: 500, easing: 'ease-in-out', fill: 'both' };
 
     visuals.forEach(visual => {
         const img = visual.querySelector('img');

@@ -93,7 +93,6 @@
 
 .portfolio-visual:hover {
     transform: scale(1.02) translateY(-6px);
-    /* color: #0a0e0a; */
     box-shadow: 0 0 0 10px #0a0e0a, var(--shadow-btn);
 }
 
@@ -101,8 +100,8 @@
     position: absolute;
     inset: 0;
     margin: auto;
-    width: 0px;
-    height: 0px;
+    width: 3px;
+    height: 3px;
     object-fit: cover;
     filter: brightness(0) invert(1);
 }
