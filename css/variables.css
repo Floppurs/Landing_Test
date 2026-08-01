@@ -8,12 +8,6 @@
     --color-text-muted: #3a553a;
     --color-accent: #00ff41;
     --color-accent-hover: #00cc33;
-    --color-pink: #00ff41;
-    --color-pink-hover: #00cc33;
-    --color-green: #39ff14;
-    --color-green-hover: #00cc00;
-    --color-purple: #00ff41;
-    --color-purple-hover: #00dd33;
 
     /* Gradients */
     --gradient-logo: linear-gradient(135deg, #00ff41, #39ff14);
