@@ -34,8 +34,8 @@
 /* Контейнер для кнопки "Контакты" — справа */
 .nav-right {
     display: flex;
-    margin-left: 3vw;
-    margin-right: 5vw;
+    margin-left: 3%;
+    margin-right: 15%;
 }
 
 .navbar.scrolled {
@@ -49,7 +49,8 @@
 }
 
 .nav-logo {
-    margin-left: 3%;
+    margin-left: 10%;
+    margin-right: 3%;
     width: 300px;
     height: 300px;
     cursor: pointer;

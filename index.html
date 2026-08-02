@@ -7,11 +7,9 @@
     <title>Портфолио Fullstack Developer</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <!-- Fonts (локально) -->
+    <link href="assets/fonts/inter.css" rel="stylesheet">
+    <link href="assets/fonts/playfair.css" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
@@ -20,7 +18,7 @@
     <script type="importmap">
         {
             "imports": {
-                "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+                "three": "./vendor/three/three.module.js"
             }
         }
     </script>
@@ -102,7 +100,7 @@
         </div>
         <div class="portfolio-card" data-delay="0">
             <div class="portfolio-visual">
-                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="Магазин одежды"
+                <img src="assets/images/clothing.jpg" alt="Магазин одежды"
                     loading="lazy">
             <div class="portfolio-overlay">
                 <div class="tv-overlay">
@@ -148,7 +146,7 @@
         </div>
         <div class="portfolio-card reverse" data-delay="200">
             <div class="portfolio-visual">
-                <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80" alt="Зоомагазин"
+                <img src="assets/images/petshop.jpg" alt="Зоомагазин"
                     loading="lazy">
             <div class="portfolio-overlay">
                 <div class="tv-overlay">
@@ -194,7 +192,7 @@
         </div>
         <div class="portfolio-card" data-delay="400">
             <div class="portfolio-visual">
-                <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=800&q=80" alt="Кондитерская"
+                <img src="assets/images/bakery.jpg" alt="Кондитерская"
                     loading="lazy">
             <div class="portfolio-overlay">
                 <div class="tv-overlay">
