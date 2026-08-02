@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect fill="url(#bg)" width="960" height="640" rx="20"/>
+  
+  <!-- Vinyl record -->
+  <circle cx="480" cy="320" r="120" fill="none" stroke="#6c63ff" stroke-width="3" opacity="0.6"/>
+  <circle cx="480" cy="320" r="80" fill="none" stroke="#e94560" stroke-width="2" opacity="0.4"/>
+  <circle cx="480" cy="320" r="40" fill="#6c63ff" opacity="0.3"/>
+  
+  <!-- Play button triangle -->
+  <path d="M440 300 L470 320 L440 340 Z" fill="#fff" opacity="0.8"/>
+  
+  <!-- Sound waves -->
+  <path d="M520 280 Q540 320 520 360" stroke="#6c63ff" stroke-width="2" fill="none" opacity="0.5"/>
+  <path d="M540 260 Q565 320 540 380" stroke="#e94560" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M560 240 Q590 320 560 400" stroke="#6c63ff" stroke-width="2" fill="none" opacity="0.3"/>
+  
+  <!-- Title -->
+  <text x="480" y="520" text-anchor="middle" fill="#fff" font-size="28" font-family="Arial" opacity="0.6">Music Player</text>
+</svg>

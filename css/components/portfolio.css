@@ -9,7 +9,7 @@
 }
 
 /* Каждая следующая секция перекрывает предыдущую */
-#clothing { z-index: 1; }
+#player { z-index: 1; }
 #petshop { z-index: 2; }
 #bakery { z-index: 3; }
 
