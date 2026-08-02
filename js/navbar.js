@@ -34,3 +34,32 @@ export function initNavbar() {
     }
 }
 
+/**
+ * JS-скролл к секциям с временным отключением sticky.
+ *
+ * Проблема: position: sticky + z-index ломают нативную прокрутку к якорям —
+ * браузер видит секцию визуально на top: 0 и не прокручивает, хотя она
+ * перекрыта другой sticky-секцией с большим z-index.
+ *
+ * Решение: при клике временно переключаем sticky → static, измеряем истинную
+ * позицию через getBoundingClientRect(), возвращаем sticky и прокручиваем.
+ * Всё синхронно — без визуального скачка.
+ */
+export function initJsScroll() {
+    document.querySelectorAll('a[data-scroll]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (!target) return;
+
+            // Временно отключаем sticky для точного измерения
+            const originalPosition = target.style.position;
+            target.style.position = 'static';
+            const top = target.getBoundingClientRect().top + window.scrollY;
+            target.style.position = originalPosition;
+
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        });
+    });
+}
+
