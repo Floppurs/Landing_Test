@@ -89,6 +89,14 @@
     box-shadow: var(--shadow-card), 0 0 40px rgba(0, 255, 65, 0.04);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+/* Когда portfolio-visual — это ссылка <a> */
+a.portfolio-visual {
+    display: block;
+    text-decoration: none;
 }
 
 .portfolio-visual:hover {

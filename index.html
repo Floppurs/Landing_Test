@@ -14,14 +14,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- Three.js -->
-    <script type="importmap">
-        {
-            "imports": {
-                "three": "./vendor/three/three.module.js"
-            }
-        }
-    </script>
+    <!-- Three.js будет подключен через ES modules -->
 </head>
 
 <body>
@@ -99,8 +92,8 @@
             <p class="section-desc">Интерактивный плеер с возможностью прослушивания треков</p>
         </div>
         <div class="portfolio-card" data-delay="0">
-            <div class="portfolio-visual">
-                <img src="assets/images/player.svg" alt="Музыкальный плеер"
+            <a href="player.html" class="portfolio-visual">
+                <img src="assets/images/player.jpg" alt="Музыкальный плеер"
                     loading="lazy">
                 <div class="portfolio-overlay">
                     <div class="tv-overlay">
@@ -109,7 +102,7 @@
                     </div>
                     <span class="portfolio-overlay-tag">🎵 Открыть плеер</span>
                 </div>
-            </div>
+            </a>
             <div class="portfolio-info">
                 <div class="portfolio-number">01</div>
                 <div class="category">Audio / Music Player</div>
@@ -145,19 +138,19 @@
             <p class="section-desc">Яркий и дружелюбный сайт для зоотоваров</p>
         </div>
         <div class="portfolio-card reverse" data-delay="200">
-            <div class="portfolio-visual">
+            <a href="https://example.com/pet-shop" target="_blank" class="portfolio-visual">
                 <img src="assets/images/petshop.jpg" alt="Зоомагазин"
                     loading="lazy">
-            <div class="portfolio-overlay">
-                <div class="tv-overlay">
-                    <div class="tv-overlay__lines"></div>
-                    <div class="tv-overlay__noise"></div>
+                <div class="portfolio-overlay">
+                    <div class="tv-overlay">
+                        <div class="tv-overlay__lines"></div>
+                        <div class="tv-overlay__noise"></div>
+                    </div>
+                    <span class="portfolio-overlay-tag">🔗 Открыть сайт</span>
                 </div>
-                <span class="portfolio-overlay-tag">🔗 Открыть сайт</span>
-            </div>
-        </div>
-        <div class="portfolio-info">
-            <div class="portfolio-number">02</div>
+            </a>
+            <div class="portfolio-info">
+                <div class="portfolio-number">02</div>
                 <div class="category">Animals / E-commerce</div>
                 <h3>Happy Pet</h3>
                 <p>
@@ -191,19 +184,19 @@
             <p class="section-desc">Аппетитный сайт для домашней выпечки</p>
         </div>
         <div class="portfolio-card" data-delay="400">
-            <div class="portfolio-visual">
+            <a href="https://example.com/bakery" target="_blank" class="portfolio-visual">
                 <img src="assets/images/bakery.jpg" alt="Кондитерская"
                     loading="lazy">
-            <div class="portfolio-overlay">
-                <div class="tv-overlay">
-                    <div class="tv-overlay__lines"></div>
-                    <div class="tv-overlay__noise"></div>
+                <div class="portfolio-overlay">
+                    <div class="tv-overlay">
+                        <div class="tv-overlay__lines"></div>
+                        <div class="tv-overlay__noise"></div>
+                    </div>
+                    <span class="portfolio-overlay-tag">🔗 Открыть сайт</span>
                 </div>
-                <span class="portfolio-overlay-tag">🔗 Открыть сайт</span>
-            </div>
-        </div>
-        <div class="portfolio-info">
-            <div class="portfolio-number">03</div>
+            </a>
+            <div class="portfolio-info">
+                <div class="portfolio-number">03</div>
                 <div class="category">Food / Landing Page</div>
                 <h3>Sweet Dream</h3>
                 <p>

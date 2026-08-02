@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Fullstack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-86LAClHL.svg">
+
+    <!-- Fonts (локально) -->
+
+    <!-- Styles -->
+
+    <!-- Three.js будет подключен через ES modules -->
+  <script type="module" crossorigin src="/assets/main-AvhkYtd-.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-D_8ubDs0.css">
+</head>
+
+<body>
+
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+
+        <div class="nav-logo" id="navLogo">
+            <a href="#hero" data-scroll>
+                <canvas id="planetCanvas"></canvas>
+            </a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#player" data-scroll>Плеер</a></li>
+            <li><a href="#petshop" data-scroll>Зоомагазин</a></li>
+            <li><a href="#bakery" data-scroll>Кондитерская</a></li>
+            <li class="nav-mobile-only"><a href="#footer" class="nav-contact-btn" data-scroll>Контакты</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="#footer" class="nav-contact-btn" data-scroll>Контакты</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+            <div class="hero-shape"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">✦ Fullstack Developer ✦</div>
+            <h1>
+                Создаю уникальные<br>
+                <span class="highlight">сайты</span>
+            </h1>
+            <p class="hero-subtitle">
+                Разрабатываю современные сайты с уникальным дизайном,
+                анимацией и Back-End настройкой.
+            </p>
+            <a href="#player" class="hero-cta" data-scroll>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="5 12 12 19 19 12"></polyline>
+                </svg>
+
+                <span>Смотреть работы</span>
+                
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="5 12 12 19 19 12"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO 1: Music Player ===== -->
+    <section class="portfolio" id="player">
+        <div class="section-header">
+            <div class="section-tag">Проект 01</div>
+            <h2 class="section-title">Музыкальный <span class="highlight">плеер</span></h2>
+            <p class="section-desc">Интерактивный плеер с возможностью прослушивания треков</p>
+        </div>
+        <div class="portfolio-card" data-delay="0">
+            <a href="player.html" class="portfolio-visual">
+                <img src="/assets/player-D3GXfNmC.jpg" alt="Музыкальный плеер"
+                    loading="lazy">
+                <div class="portfolio-overlay">
+                    <div class="tv-overlay">
+                        <div class="tv-overlay__lines"></div>
+                        <div class="tv-overlay__noise"></div>
+                    </div>
+                    <span class="portfolio-overlay-tag">🎵 Открыть плеер</span>
+                </div>
+            </a>
+            <div class="portfolio-info">
+                <div class="portfolio-number">01</div>
+                <div class="category">Audio / Music Player</div>
+                <h3>Music Player</h3>
+                <p>
+                    Интерактивный музыкальный плеер с возможностью прослушивания
+                    избранных треков. Поддержка управления воспроизведением,
+                    адаптивный дизайн для всех устройств. Переход на отдельную
+                    страницу плеера для полного опыта.
+                </p>
+                <div class="portfolio-tech">
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                    <span>Audio API</span>
+                </div>
+                <a href="player.html" class="portfolio-btn">
+                    Открыть плеер
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO 2: Pet Shop ===== -->
+    <section class="portfolio" id="petshop">
+        <div class="section-header">
+            <div class="section-tag">Проект 02</div>
+            <h2 class="section-title">Зоомагазин <span class="highlight">PetShop</span></h2>
+            <p class="section-desc">Яркий и дружелюбный сайт для зоотоваров</p>
+        </div>
+        <div class="portfolio-card reverse" data-delay="200">
+            <a href="https://example.com/pet-shop" target="_blank" class="portfolio-visual">
+                <img src="/assets/petshop-DuhBNzFg.jpg" alt="Зоомагазин"
+                    loading="lazy">
+                <div class="portfolio-overlay">
+                    <div class="tv-overlay">
+                        <div class="tv-overlay__lines"></div>
+                        <div class="tv-overlay__noise"></div>
+                    </div>
+                    <span class="portfolio-overlay-tag">🔗 Открыть сайт</span>
+                </div>
+            </a>
+            <div class="portfolio-info">
+                <div class="portfolio-number">02</div>
+                <div class="category">Animals / E-commerce</div>
+                <h3>Happy Pet</h3>
+                <p>
+                    Сайт зоомагазина с тёплой цветовой палитрой, иллюстрациями
+                    животных и удобным каталогом. Интерактивные карточки товаров,
+                    фильтры и простая навигация для заботливых хозяев.
+                </p>
+                <div class="portfolio-tech">
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Tailwind</span>
+                </div>
+                <a href="https://example.com/pet-shop" target="_blank" class="portfolio-btn">
+                    Посмотреть сайт
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO 3: Bakery ===== -->
+    <section class="portfolio" id="bakery">
+        <div class="section-header">
+            <div class="section-tag">Проект 03</div>
+            <h2 class="section-title">Кондитерская <span class="highlight">Bakery</span></h2>
+            <p class="section-desc">Аппетитный сайт для домашней выпечки</p>
+        </div>
+        <div class="portfolio-card" data-delay="400">
+            <a href="https://example.com/bakery" target="_blank" class="portfolio-visual">
+                <img src="/assets/bakery-CEsT6RJE.jpg" alt="Кондитерская"
+                    loading="lazy">
+                <div class="portfolio-overlay">
+                    <div class="tv-overlay">
+                        <div class="tv-overlay__lines"></div>
+                        <div class="tv-overlay__noise"></div>
+                    </div>
+                    <span class="portfolio-overlay-tag">🔗 Открыть сайт</span>
+                </div>
+            </a>
+            <div class="portfolio-info">
+                <div class="portfolio-number">03</div>
+                <div class="category">Food / Landing Page</div>
+                <h3>Sweet Dream</h3>
+                <p>
+                    Уютный лендинг для кондитерской с фотографиями десертов,
+                    параллакс-эффектами и анимацией появления блюд.
+                    Интегрирован онлайн-заказ и карта с расположением пекарни.
+                </p>
+                <div class="portfolio-tech">
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                    <span>GSAP</span>
+                    <span>SASS</span>
+                </div>
+                <a href="https://example.com/bakery" target="_blank" class="portfolio-btn">
+                    Посмотреть сайт
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Portfolio.</h3>
+                <p>
+                    Веб-дизайнер с опытом создания современных,
+                    адаптивных и анимированных сайтов. Открыт к сотрудничеству
+                    и новым проектам.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" target="_blank" title="Telegram" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.127.022.332-.012.594a27.424 27.424 0 0 1-.614 3.263c-.275 1.172-.5 1.977-.675 2.418a5.34 5.34 0 0 1-.247.593c-.123.254-.278.459-.513.508-.296.062-.638-.137-.986-.374a5.385 5.385 0 0 1-.705-.54c-.212-.196-.423-.407-.618-.607a133.754 133.754 0 0 1-1.8-1.716c-.113-.113-.22-.223-.318-.318-.176-.172-.343-.335-.5-.496a.286.286 0 0 1-.073-.163c-.023-.1.035-.195.142-.268.03-.02.058-.038.087-.055.023-.014.044-.027.063-.04.365-.254.75-.522 1.103-.752.125-.082.248-.166.365-.247.346-.24.662-.46.823-.52.014-.005.027-.01.04-.015.16-.064.324-.13.485-.194.573-.23 1.068-.38 1.286-.38.04 0 .08.008.117.024z" />
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" title="GitHub" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" title="Dribbble" aria-label="Dribbble">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308a10.146 10.146 0 0 0 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4a10.124 10.124 0 0 0 6.29 2.166c1.42 0 2.77-.29 4.006-.816zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.858zm-2.42-8.955c.46.008 4.683.026 9.477-1.248a38.777 38.777 0 0 0-3.77-3.852 10.143 10.143 0 0 0-5.707 5.1zm12.22-2.56a43.833 43.833 0 0 1 3.654 3.585c3.537-1.332 5.023-3.354 5.148-3.533A10.14 10.14 0 0 0 13.5 1.292c-.098.002-.194.01-.292.013 1.166 1.644 2.1 3.46 2.684 5.364zm-3.094-5.374c-.92 2.84-2.432 5.896-4.428 8.78 1.344.66 2.748 1.22 4.19 1.657 1.448-3.077 1.34-6.702 1.28-8.382-.352-.026-.704-.045-1.042-.055z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4>Навигация</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero" data-scroll>Главная</a></li>
+                    <li><a href="#player" data-scroll>Плеер</a></li>
+                    <li><a href="#petshop" data-scroll>Зоомагазин</a></li>
+                    <li><a href="#bakery" data-scroll>Кондитерская</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <div class="footer-contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c63ff" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>designer@portfolio.ru</span>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c63ff" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    <span>+7 (999) 123-45-67</span>
+                </div>
+                <div class="footer-contact-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c63ff" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>Москва, Россия</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 Portfolio. Все права защищены.
+        </div>
+    </footer>
+
+    <!-- Scripts (type="module" для поддержки ES-imports) -->
+</body>
+
+</html>
