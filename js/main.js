@@ -6,6 +6,7 @@ import { initParticles } from './particles.js';
 import { initNavbar, initJsScroll } from './navbar.js';
 import { initScrollAnimations, initHeroParallax } from './animations.js';
 import { initPlanet } from './planet.js';
+import { initCassette } from './cassette.js';
 import { initTextScramble } from './text-shuffle.js';
 import { initTvOnEffect } from './tv-on-effect.js';
 
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initHeroParallax();
     initPlanet();
+    initCassette();
     initTextScramble();
     initTvOnEffect();
 

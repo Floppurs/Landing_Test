@@ -13,16 +13,17 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main-green.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/player-cream.css">
 
     <!-- Three.js будет подключен через ES modules -->
 </head>
 
-<body>
+<body class="player-page">
 
-    <!-- Cursor Glow -->
-    <div id="cursor-glow"></div>
+    <!-- Cursor Glow (отключён на странице плеера) -->
+    <!-- <div id="cursor-glow"></div> -->
 
     <!-- Particles Canvas -->
     <canvas id="particles-canvas"></canvas>
@@ -32,7 +33,7 @@
 
         <div class="nav-logo" id="navLogo">
             <a href="index.html#hero">
-                <canvas id="planetCanvas"></canvas>
+                <canvas id="cassetteCanvas"></canvas>
             </a>
         </div>
         <ul class="nav-links" id="navLinks">
@@ -119,9 +120,9 @@
     <!-- Scripts -->
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/particles.js"></script>
-    <script type="module" src="js/cursor-glow.js"></script>
+    <!-- cursor-glow.js отключён на странице плеера — курсор в виде ноты -->
     <script type="module" src="js/navbar.js"></script>
-    <script type="module" src="js/planet.js"></script>
+    <script type="module" src="js/cassette.js"></script>
 </body>
 
 </html>

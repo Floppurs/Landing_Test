@@ -1,0 +1,169 @@
+/* ===== CREAM / SAGE THEME FOR PLAYER PAGE ===== */
+/* Подключается только в player.html после main.css */
+
+:root {
+    /* Colors — Cream & Sage Theme */
+    --color-bg: #faf6ef;
+    --color-bg-card: #fffdf8;
+    --color-bg-overlay: rgba(250, 246, 239, 0.92);
+    --color-text-primary: #2d2a26;
+    --color-text-secondary: #6b6459;
+    --color-text-muted: #a89f8f;
+    --color-accent: #8a9a7b;
+    --color-accent-hover: #74856a;
+
+    /* Gradients */
+    --gradient-logo: linear-gradient(135deg, #8a9a7b, #a8b89a);
+    --gradient-hero: linear-gradient(135deg, #8a9a7b, #a8b89a, #b8c4ac);
+    --gradient-cta: linear-gradient(135deg, #8a9a7b, #74856a);
+    --gradient-cta-hover: linear-gradient(135deg, #a8b89a, #8a9a7b);
+    --gradient-neon-glow: linear-gradient(135deg, rgba(138, 154, 123, 0.2), rgba(168, 184, 154, 0.05));
+
+    /* Shadows */
+    --shadow-card: 0 20px 60px rgba(45, 42, 38, 0.12);
+    --shadow-card-hover: 0 30px 80px rgba(138, 154, 123, 0.25);
+    --shadow-btn: 0 12px 40px rgba(138, 154, 123, 0.3);
+    --shadow-nav: 0 4px 30px rgba(45, 42, 38, 0.08);
+
+    /* Navbar */
+    --nav-glow-color: rgba(138, 154, 123, 0.1);
+}
+
+/* ===== GLOBAL OVERRIDES ===== */
+
+/* Курсор-нота на странице плеера */
+body.player-page {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='%238a9a7b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9 18V5l12-2v13'/><circle cx='6' cy='18' r='3'/><circle cx='18' cy='16' r='3'/></svg>") 18 18, auto;
+}
+
+/* Cursor Glow */
+#cursor-glow {
+    background: radial-gradient(
+        circle at center,
+        rgba(138, 154, 123, var(--glow-opacity)) 0%,
+        rgba(138, 154, 123, 0.03) 40%,
+        transparent 70%
+    );
+    mix-blend-mode: multiply;
+}
+
+/* Text Selection */
+::selection {
+    background: rgba(138, 154, 123, 0.3);
+    color: #2d2a26;
+}
+
+/* ===== NAVBAR OVERRIDES ===== */
+
+.navbar.scrolled {
+    background: var(--color-bg-overlay);
+    box-shadow: 0 4px 30px rgba(138, 154, 123, 0.15), 0 0 60px rgba(138, 154, 123, 0.06);
+}
+
+.nav-links a {
+    color: var(--color-text-secondary);
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+    text-shadow: 0 0 20px rgba(138, 154, 123, 0.4);
+}
+
+.nav-links a::after {
+    background: var(--gradient-logo);
+    box-shadow: 0 0 10px rgba(138, 154, 123, 0.6);
+}
+
+.nav-contact-btn {
+    border-color: var(--color-accent);
+    color: var(--color-accent) !important;
+    box-shadow: 0 0 20px rgba(138, 154, 123, 0.15);
+}
+
+.nav-contact-btn:hover {
+    background: var(--color-accent);
+    color: #faf6ef !important;
+    box-shadow: 0 0 0 10px, 0 0 30px rgba(138, 154, 123, 0.4);
+}
+
+.hamburger span {
+    background: var(--color-text-primary);
+    box-shadow: 0 0 12px rgba(138, 154, 123, 0.2);
+}
+
+/* Mobile menu */
+@media (max-width: 1350px) {
+    .nav-links {
+        background: rgba(250, 246, 239, 0.97);
+        border-left: 2px solid rgba(138, 154, 123, 0.2);
+        box-shadow: -10px 0 60px rgba(138, 154, 123, 0.1);
+    }
+}
+
+/* ===== MUSIC PLAYER SECTION ===== */
+
+.music-player-section {
+    background: linear-gradient(180deg, #faf6ef 0%, #f3ede1 100%);
+}
+
+/* Header */
+.player-header h1 {
+    color: var(--color-text-primary);
+}
+
+.player-header h1 .highlight {
+    color: var(--color-accent);
+    text-shadow: 0 0 30px rgba(138, 154, 123, 0.3);
+}
+
+.player-subtitle {
+    color: var(--color-text-muted);
+}
+
+/* Track Item */
+.track-item {
+    background: rgba(255, 253, 248, 0.85);
+    border: 1px solid rgba(138, 154, 123, 0.15);
+    box-shadow: 0 4px 20px rgba(45, 42, 38, 0.05);
+}
+
+.track-item:hover {
+    background: rgba(255, 253, 248, 1);
+    border-color: rgba(138, 154, 123, 0.35);
+    box-shadow: 0 8px 32px rgba(138, 154, 123, 0.15);
+}
+
+/* Track Number */
+.track-number {
+    color: var(--color-accent);
+    text-shadow: 0 0 20px rgba(138, 154, 123, 0.25);
+}
+
+/* Track Info */
+.track-title {
+    color: var(--color-text-primary);
+}
+
+.track-artist {
+    color: var(--color-text-muted);
+}
+
+/* Audio Element */
+.track-item audio {
+    filter: none;
+    accent-color: var(--color-accent);
+}
+
+/* Back Button */
+.back-btn {
+    color: var(--color-text-primary);
+    border: 1px solid rgba(138, 154, 123, 0.3);
+    background: rgba(255, 253, 248, 0.6);
+}
+
+.back-btn:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    background: rgba(138, 154, 123, 0.08);
+    box-shadow: 0 0 20px rgba(138, 154, 123, 0.2);
+}
