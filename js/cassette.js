@@ -63,61 +63,71 @@ export function initCassette() {
     bottom.position.y = -0.72;
     cassetteGroup.add(bottom);
 
-    // ===== Катушки (цилиндры) — с блеском =====
-    const reelGeometry = new THREE.CylinderGeometry(0.42, 0.42, 0.12, 48);
-    const reelMaterial = new THREE.MeshStandardMaterial({
-        color: '#8a9a7b',
-        roughness: 0.2,
-        metalness: 0.6,
-    });
+    // ===== Детали обеих сторон кассеты =====
+    function addFaceDetails(z) {
+        const dir = Math.sign(z); // 1 — лицевая сторона, -1 — задняя
 
-    const reelLeft = new THREE.Mesh(reelGeometry, reelMaterial);
-    reelLeft.position.set(-0.55, 0, 0.2);
-    reelLeft.rotation.x = Math.PI / 2;
-    cassetteGroup.add(reelLeft);
+        // Катушки (цилиндры) — с блеском
+        const reelGeometry = new THREE.CylinderGeometry(0.42, 0.42, 0.12, 48);
+        const reelMaterial = new THREE.MeshStandardMaterial({
+            color: '#8a9a7b',
+            roughness: 0.2,
+            metalness: 0.6,
+        });
 
-    const reelRight = new THREE.Mesh(reelGeometry, reelMaterial);
-    reelRight.position.set(0.55, 0, 0.2);
-    reelRight.rotation.x = Math.PI / 2;
-    cassetteGroup.add(reelRight);
+        const reelLeft = new THREE.Mesh(reelGeometry, reelMaterial);
+        reelLeft.position.set(-0.55, 0, z);
+        reelLeft.rotation.x = Math.PI / 2;
+        cassetteGroup.add(reelLeft);
 
-    // Втулки катушек (внутренние отверстия) — с блеском
-    const hubGeometry = new THREE.CylinderGeometry(0.18, 0.18, 0.14, 32);
-    const hubMaterial = new THREE.MeshStandardMaterial({
-        color: '#2d2a26',
-        roughness: 0.25,
-        metalness: 0.7,
-    });
+        const reelRight = new THREE.Mesh(reelGeometry, reelMaterial);
+        reelRight.position.set(0.55, 0, z);
+        reelRight.rotation.x = Math.PI / 2;
+        cassetteGroup.add(reelRight);
 
-    const hubLeft = new THREE.Mesh(hubGeometry, hubMaterial);
-    hubLeft.position.set(-0.55, 0, 0.2);
-    hubLeft.rotation.x = Math.PI / 2;
-    cassetteGroup.add(hubLeft);
+        // Втулки катушек (внутренние отверстия) — с блеском
+        const hubGeometry = new THREE.CylinderGeometry(0.18, 0.18, 0.14, 32);
+        const hubMaterial = new THREE.MeshStandardMaterial({
+            color: '#2d2a26',
+            roughness: 0.25,
+            metalness: 0.7,
+        });
 
-    const hubRight = new THREE.Mesh(hubGeometry, hubMaterial);
-    hubRight.position.set(0.55, 0, 0.2);
-    hubRight.rotation.x = Math.PI / 2;
-    cassetteGroup.add(hubRight);
+        const hubLeft = new THREE.Mesh(hubGeometry, hubMaterial);
+        hubLeft.position.set(-0.55, 0, z);
+        hubLeft.rotation.x = Math.PI / 2;
+        cassetteGroup.add(hubLeft);
 
-    // ===== Окно кассеты (прозрачная вставка) =====
-    const windowGeometry = new THREE.BoxGeometry(1.7, 0.5, 0.02);
-    const windowMaterial = new THREE.MeshBasicMaterial({
-        color: '#8a9a7b',
-        transparent: true,
-        opacity: 0.25,
-    });
-    const cassetteWindow = new THREE.Mesh(windowGeometry, windowMaterial);
-    cassetteWindow.position.set(0, 0, 0.19);
-    cassetteGroup.add(cassetteWindow);
+        const hubRight = new THREE.Mesh(hubGeometry, hubMaterial);
+        hubRight.position.set(0.55, 0, z);
+        hubRight.rotation.x = Math.PI / 2;
+        cassetteGroup.add(hubRight);
 
-    // ===== Лента между катушками =====
-    const tapeGeometry = new THREE.BoxGeometry(1.1, 0.06, 0.02);
-    const tapeMaterial = new THREE.MeshBasicMaterial({
-        color: '#6b6459',
-    });
-    const tape = new THREE.Mesh(tapeGeometry, tapeMaterial);
-    tape.position.set(0, 0, 0.21);
-    cassetteGroup.add(tape);
+        // Окно кассеты (прозрачная вставка) — чуть ближе к центру корпуса
+        const windowGeometry = new THREE.BoxGeometry(1.7, 0.5, 0.02);
+        const windowMaterial = new THREE.MeshBasicMaterial({
+            color: '#8a9a7b',
+            transparent: true,
+            opacity: 0.25,
+        });
+        const cassetteWindow = new THREE.Mesh(windowGeometry, windowMaterial);
+        cassetteWindow.position.set(0, 0, z - dir * 0.01);
+        cassetteGroup.add(cassetteWindow);
+
+        // Лента между катушками — чуть дальше от центра корпуса
+        const tapeGeometry = new THREE.BoxGeometry(1.1, 0.06, 0.02);
+        const tapeMaterial = new THREE.MeshBasicMaterial({
+            color: '#6b6459',
+        });
+        const tape = new THREE.Mesh(tapeGeometry, tapeMaterial);
+        tape.position.set(0, 0, z + dir * 0.01);
+        cassetteGroup.add(tape);
+    }
+
+    // Лицевая сторона
+    addFaceDetails(0.2);
+    // Задняя сторона
+    addFaceDetails(-0.2);
 
     // ===== Простое равномерное освещение (без теней) =====
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.9);

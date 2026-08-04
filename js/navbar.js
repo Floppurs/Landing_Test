@@ -45,21 +45,30 @@ export function initNavbar() {
  * позицию через getBoundingClientRect(), возвращаем sticky и прокручиваем.
  * Всё синхронно — без визуального скачка.
  */
+let jsScrollInitialized = false;
+
 export function initJsScroll() {
-    document.querySelectorAll('a[data-scroll]').forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (!target) return;
+    // Защита от дублирования обработчиков при повторных монтированиях
+    if (jsScrollInitialized) return;
+    jsScrollInitialized = true;
 
-            // Временно отключаем sticky для точного измерения
-            const originalPosition = target.style.position;
-            target.style.position = 'static';
-            const top = target.getBoundingClientRect().top + window.scrollY;
-            target.style.position = originalPosition;
+    // Делегирование событий: перехватываем клики по любым ссылкам с data-scroll,
+    // даже если они добавлены в DOM позже (например, Hero рендерится после Navbar).
+    document.addEventListener('click', function (e) {
+        const link = e.target.closest('a[data-scroll]');
+        if (!link) return;
 
-            window.scrollTo({ top: top, behavior: 'smooth' });
-        });
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+
+        // Временно отключаем sticky для точного измерения
+        const originalPosition = target.style.position;
+        target.style.position = 'static';
+        const top = target.getBoundingClientRect().top + window.scrollY;
+        target.style.position = originalPosition;
+
+        window.scrollTo({ top: top, behavior: 'smooth' });
     });
 }
 
