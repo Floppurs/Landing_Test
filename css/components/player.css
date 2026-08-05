@@ -175,6 +175,15 @@
     margin-bottom: 60px;
 }
 
+.player-loading {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    padding: 40px 0;
+}
+
 /* Track Item */
 .track-item {
     display: flex;
